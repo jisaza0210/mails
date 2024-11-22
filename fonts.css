@@ -1,0 +1,21 @@
+/* MrEaves fonts */
+@font-face {
+    font-family: 'MrEaves';
+    src: url('https://vaova-fonts-stg.s3.us-east-1.amazonaws.com/MrEaves/MrEavesBold.otf') format('opentype');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MrEaves';
+    src: url('https://vaova-fonts-stg.s3.us-east-1.amazonaws.com/MrEaves/MrEavesLight.otf') format('opentype');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MrEaves';
+    src: url('https://vaova-fonts-stg.s3.us-east-1.amazonaws.com/MrEaves/MrEavesRegular.otf') format('opentype');
+    font-weight: 400;
+    font-display: swap;
+}
