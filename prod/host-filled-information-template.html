@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Niramit:wght@300;400;500;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+</style>
+
+<body
+    style="max-width:768px; margin: auto; background-color:#fff; text-align:center;font-family: 'Niramit', sans-serif; font-size: 20px;">
+    <div style="width: 100%">
+        <img src="https://images.trip.vaovatravel.com/email/banner-information-filled.png" style="width:100%;" />
+    </div>
+    <p>
+    <div style="width: 100%; background-color:#fff; margin-top:10px;  padding:10px;">
+        <p>Hi <b>{{host_name}},</b></p>
+        <p>You have successfully completed the trip registration. Once you match with a roommate, you'll receive a
+            separate email with a confirmation.
+            <br />These are the details of your trip:
+        </p>
+
+        <div
+            style="width:80%; max-width: 300px; margin:auto; background-color: #FFF; color:#000; font-size:18px; text-align:left">
+            <b>Name:</b> {{host_name}}<br />
+            {% if guest_name %}<b>Roommate:</b>{{guest_name}}{% endif %}<br />
+            <b>Flights:</b><br />
+            {% for flight in flights %}
+            {% endfor %}
+            <b>Hotels:</b><br />
+            {% for hotel in hotels %}
+            <img src="{{hotel.image}}" width="100" /> <br />
+            <b>Name:</b>{{hotel.name}}<br />
+            <b>City:</b>{{hotel.destination_name}}<br />
+            <b>Room type:</b> {{hotel.room_type}}
+            {% endfor %}
+        </div>
+        <p>If you have any questions, please don't hesitate to<br>
+            <a href="https://vaovatravel-helpcenter.freshdesk.com/support/solutions">
+                <img src="https://images.trip.vaovatravel.com/email/contact-us-button.png" />
+            </a>
+        </p>
+    </div>
+
+    </p>
+</body>
+
+</html>

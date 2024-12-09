@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <title></title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Niramit:wght@300;400;500;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+</head>
+
+<body
+    style="max-width:768px; margin: auto; background-color:#fff; text-align:center; font-family: 'Niramit', sans-serif; font-size: 20px;">
+    <div style="width: 100%">
+        <img src="https://stg-images.trip.vaovatravel.com/email/banner-user-created.png" style="width:100%;">
+    </div>
+    <p>
+    <div
+        style="width: 100%; max-width: 600px; color:#000; background-color:#fff; margin:10px auto 0; font-size:20px; padding:10px;">
+        <p>Hi <b>{{name}},</b><br />The registration window for your trip will be open from
+            <b>{{join_start_date}} </b>until <b>{{join_end_date}}</b>.
+            During this time, you can complete your personal details and choose your accommodation and flight
+            preferences.
+        </p>
+
+        <p><b>Trip registration</b></p>
+        <div style="text-align: left;">
+            <ul>
+                <li>Select your roommate</li>
+                <li>Select your room type (King/Queen or Double-bed)</li>
+                <li>Select hotels</li>
+                <li>Select domestic flights</li>
+            </ul>
+        </div>
+
+        <p>Please note that, if you miss the registration window, your trip details will be assigned randomly.
+            We highly recommend that you complete this process inside vaovapp.
+        </p>
+        {% if user_created %}
+        <p>To log in and start your trip registration, please use the following credentials:</p>
+        <div style="width:100%; margin:auto; text-align:left;">
+            <ul>
+                <li> <b>Username:</b> <span style="font-size:18px;text-decoration-line:none;">{{email}}</span></li>
+                <li> <b>Password:</b> <span style="font-size:18px">{{password}}</span></li>
+            </ul>
+        </div>
+        {% endif %}
+        <p>If you have any questions, please don't hesitate to<br>
+            <a href="https://vaovatravel-helpcenter.freshdesk.com/support/solutions">
+                <img src="https://stg-images.trip.vaovatravel.com/email/contact-us-button.png" />
+            </a>
+        </p>
+
+    </div>
+</body>
+
+</html>
