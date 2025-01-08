@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Niramit:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://vaova-fonts-stg.s3.us-east-1.amazonaws.com/fonts.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body
+    style="
+      margin: 0;
+      padding: 0;
+      font-family:
+        Tahoma,
+        -apple-system,
+        BlinkMacSystemFont,
+        &quot;Segoe UI&quot;,
+        Arial,
+        sans-serif;
+      line-height: 1.6;
+      background-color: #fff;
+    "
+  >
+    <!--[if mso]>
+    <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="width:600px;margin: 0 auto;">
+    <tr>
+    <td>
+    <![endif]-->
+
+    <div
+      style="
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 8px;
+      "
+    >
+      <p
+        style="
+          font-family:
+            &quot;Niramit&quot;,
+            -apple-system,
+            BlinkMacSystemFont,
+            &quot;Segoe UI&quot;,
+            Arial,
+            sans-serif !important;
+          -webkit-font-smoothing: antialiased;
+          font-size: 30px;
+          text-transform: uppercase;
+          text-align: center;
+          color: #00af8a;
+          letter-spacing: 0.2em;
+          line-height: 1.3;
+        "
+      >
+        Your roommate invite has been declined!
+      </p>
+
+      <div
+        style="
+          font-size: 20px;
+          font-family:
+            Tahoma,
+            Times New Roman,
+            Georgia,
+            serif;
+          text-align: center;
+          line-height: 1.4;
+          margin: 80px 0;
+        "
+      >
+        <p
+          style="
+            line-height: 48px;
+            font-size: 20px;
+            font-family:
+              Tahoma,
+              Times New Roman,
+              Georgia,
+              serif;
+          "
+        >
+          Hi
+          <span style="font-weight: 600; line-height: 30px"
+            >{{host_name}},</span
+          >
+        </p>
+      </div>
+
+      <p
+        style="
+          font-size: 20px;
+          font-family: Tahoma, sans-serif;
+          text-align: center;
+          line-height: 33.3px;
+          margin-top: 80px;
+          margin-bottom: 0;
+        "
+      >
+        <span style="font-weight: 700">{{guest_name}}</span> has declined your
+        rommate invitation
+      </p>
+
+      <p
+        style="
+          font-family: Tahoma, sans-serif;
+          font-size: 20px;
+          line-height: 33.3px;
+          margin-top: 80px;
+          text-align: center;
+        "
+      >
+        You need to log into VAOVApp and choose a new roommate, your selections
+        will remain in our system.
+      </p>
+
+      <div>
+        {% for hotel in hotels %}
+        <ul
+          style="
+            font-family: Tahoma, sans-serif;
+            font-size: 20px;
+            line-height: 33.3px;
+            list-style-position: inside;
+            text-align: center;
+            padding-left: 0;
+          "
+        >
+          <li>📍 Destination: {{hotel.destination}}</li>
+          <li>🏨 Hotel: {{hotel.name}}</li>
+        </ul>
+        {% endfor %}
+      </div>
+
+      <p
+        style="
+          font-size: 20px;
+          font-family: Tahoma, sans-serif;
+          text-align: center;
+          line-height: 33.3px;
+          margin-top: 60px;
+        "
+      >
+        The type of room for all hotels is:
+        <span style="font-weight: 700">{{accommodation_type}}</span>
+      </p>
+
+      <p
+        style="
+          font-size: 20px;
+          font-family: Tahoma, sans-serif;
+          text-align: center;
+          line-height: 33.3px;
+          margin-top: 80px;
+        "
+      >
+        If the roommate you are trying to select is already booked, they will
+        not appear in the list.
+      </p>
+
+      <p
+        style="
+          font-size: 20px;
+          font-family: Tahoma, sans-serif;
+          text-align: center;
+          line-height: 33.3px;
+          margin-top: 80px;
+        "
+      >
+        Remember, you need to choose a new roommate before finalizing your travel details.
+      </p>
+
+      <p
+        style="
+          font-size: 20px;
+          font-family: Tahoma, sans-serif;
+          text-align: center;
+          line-height: 33.3px;
+          margin-top: 80px;
+        "
+      >
+        If you need assistance, contact us
+      </p>
+
+      <table
+        cellpadding="0"
+        cellspacing="0"
+        border="0"
+        align="center"
+        style="margin: 40px auto"
+      >
+        <tr>
+          <td>
+            <a
+              href="https://vaovatravel-helpcenter.freshdesk.com/en/support/home"
+              target="_blank"
+              style="
+                display: block;
+                text-decoration: none;
+                background-color: #00af8a;
+                border-radius: 40px;
+                color: #fff;
+                font-family: Tahoma, sans-serif;
+                font-size: 20px;
+                text-align: center;
+                height: 60px;
+                line-height: 60px;
+                width: 300px;
+              "
+              >Contact us</a
+            >
+          </td>
+        </tr>
+      </table>
+
+      <div style="text-align: center; margin-top: 80px">
+        <img
+          src="https://stg-images.trip.vaovatravel.com/email/hamaca.png"
+          alt="Footer"
+          style="max-width: 70%"
+        />
+      </div>
+
+      <div style="text-align: center; margin-top: 90px">
+        <img
+          src="https://stg-images.trip.vaovatravel.com/email/footer-vaova.png"
+          alt=""
+          style="max-width: 80%"
+        />
+      </div>
+    </div>
+
+    <!--[if mso]>
+    </td>
+    </tr>
+    </table>
+    <![endif]-->
+  </body>
+</html>
